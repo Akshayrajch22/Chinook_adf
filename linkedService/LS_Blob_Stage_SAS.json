@@ -1,0 +1,19 @@
+{
+	"name": "LS_Blob_Stage_SAS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"sasUri": "https://stgakshaydamg7370.blob.core.windows.net/snowflake-stage",
+			"sasToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_KeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "stage-sas-token"
+			}
+		}
+	}
+}
